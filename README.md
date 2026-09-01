@@ -31,15 +31,20 @@ The laboratory models a standard enterprise infrastructure exposed to simulated 
 cybersecurity-soc-pentest-lab/
 ├── README.md
 ├── docs/
+│   ├── README.md
 │   ├── lab-architecture.md
 │   └── incidents/
 │       └── IR-2026-001-ssh-bruteforce.md
 ├── configs/
-│   ├── wazuh/
-│   │   ├── ossec.conf.example
-│   │   └── custom-rules.xml
-│   └── active-response/
-│       └── firewall-block-ip.sh
+│   ├── README.md
+│   ├── wazuh-server/
+│   │   ├── ossec.conf.md
+│   │   └── custom-rules.xml.md
+│   ├── wazuh-agents/
+│   │    └── ossec.conf.md
+│   └── pfsense-oppenvpn/
+│       ├──pfsense.md
+│       └──oppenvpn.md
 ├── pentesting/
 │   ├── README.md
 │   └── notes/
