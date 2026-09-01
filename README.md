@@ -28,7 +28,7 @@ The laboratory models a standard enterprise infrastructure exposed to simulated 
 ## Repository Structure
 
 ```text
-cybersecurity-soc-pentest-lab/
+cybersecurity-lab/
 ├── README.md
 ├── docs/
 │   ├── README.md
