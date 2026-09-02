@@ -14,8 +14,8 @@ The laboratory models a standard enterprise infrastructure exposed to simulated 
 
 ### Core Components
 
-* **SIEM / Central Monitoring:** Wazuh Manager & OpenSearch.
-* **Perimeter & WAF:** pfSense Firewall, OpenAppSec, Nginx Reverse Proxy, and Cloudflare Tunnels (external routing).
+* **SIEM / Central Monitoring:** Wazuh Manager.
+* **Perimeter & WAF:** pfSense Firewall, OpenAppSec, OpenVPN, Nginx Reverse Proxy, and Cloudflare Tunnels (external routing).
 * **Protected Endpoints & Servers:**
 * Windows (172.168.1.10).
 * Web & Database Server (10.10.1.7) running Node.js and web services.
@@ -38,13 +38,10 @@ cybersecurity-lab/
 ├── configs/
 │   ├── README.md
 │   ├── wazuh-server/
-│   │   ├── ossec.conf.md
-│   │   └── custom-rules.xml.md
-│   ├── wazuh-agents/
-│   │    └── ossec.conf.md
-│   └── pfsense-oppenvpn/
-│       ├──pfsense.md
-│       └──oppenvpn.md
+│   ├── nginx-vpn-server/    
+│   ├── webserver/
+│   ├── pfsense/
+│   └── LAN/
 ├── pentesting/
 │   ├── README.md
 │   └── notes/
@@ -78,11 +75,10 @@ Comprehensive documentation of offensive procedures, research, investigation, an
 Implementation of comprehensive detection engineering, monitoring, and automated hardening strategies:
 
 * **Log Data Collection & Analysis:** Real-time collection, parsing, and correlation of system, firewall, and application logs through Wazuh.
-* **File Integrity Monitoring (FIM):** Tracking unauthorized modifications to critical system binaries and web application directories (/var/www/html).
+* **File Integrity Monitoring (FIM):** Tracking unauthorized modifications to critical files and web application directories.
 * **Malware Detection:** Integration with the VirusTotal API for automated file hash reputation checking on suspicious binaries.
 * **Security Configuration Assessment (SCA):** Automated compliance and hardening checks on endpoint operating systems.
 * **Command Monitoring:** Tracking the execution of critical or sensitive administrative commands across endpoints.
 * **Custom Detection Rules:** Development of custom Wazuh XML rules and decoders tailored to detect specific threat signatures against internal services.
-* **Activity Tracking & Active Response:** Automated containment scripts and monitoring workflows triggered by Wazuh to dynamically block malicious IP addresses at the firewall level.
 
 ---
