@@ -29,9 +29,6 @@ The lab is segmented into different subnetworks to enforce security boundaries, 
 
 ---
 
-
----
-
 ## 4. Component Breakdown & Roles
 
 ### A. Perimeter & Routing
@@ -54,5 +51,3 @@ The lab is segmented into different subnetworks to enforce security boundaries, 
 
 1. **Incoming Traffic & DMZ Isolation:** External requests hit the upstream router and are filtered through the pfSense firewall into the DMZ. Communication originating from the DMZ toward the internal LAN is strictly restricted and monitored to prevent lateral movement.
 2. **Telemetry & Monitoring:** All critical system logs, custom rules, FIM triggers, and command executions across the DMZ components report back securely to the centralized Wazuh Manager (`10.10.1.10`).
-
----
