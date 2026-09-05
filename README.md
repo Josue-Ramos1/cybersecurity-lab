@@ -50,9 +50,10 @@ cybersecurity-lab/
 │       └── 03-recommendations.md
 └── screenshots/
     ├── architecture/
-    ├── wazuh/
-    ├── waf/
-    ├── firewall/
+    ├── wazuh-server/
+    ├── nginx-vpn-server/
+    ├── pfsense/
+    ├── webserver/
     └── incidents/
 
 ```
