@@ -2,7 +2,7 @@
 
 ## Overview
 
-At first, I used Wazuh's command monitoring feature (`full_command`) in `ossec.conf` to check if `[https://miloscompany.us](https://miloscompany.us)` was running. It worked, but running curl directly inside the Wazuh agent wasn't very efficient and made it harder to manage log formats.
+At first, I used Wazuh's command monitoring feature (`full_command`) in `ossec.conf` to check if `[https://miloscompany.us]` was running. It worked, but running curl directly inside the Wazuh agent wasn't very efficient and made it harder to manage log formats.
 
 To fix this, I changed the strategy: I created a simple Bash script that runs in the background using `cron`. The script checks the website status and writes any errors to a custom log file (`/var/log/web_monitor.log`). Then, the Wazuh agent just reads that file. This keeps the setup clean and easy to maintain.
 
