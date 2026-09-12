@@ -55,6 +55,8 @@ sudo systemctl restart wazuh-manager
 
 On the pfSense firewall WebGUI (`10.10.1.1`), navigate to **Status > System Logs > Settings** and configure the **Remote Logging Options**:
 
+![configpf](../../screenshots/wazuh-server/config_remotserver.png)
+
 ### Remote Logging Options Settings
 
 | Setting | Value | Description |
@@ -151,13 +153,4 @@ An ICMP ping request from host `192.168.1.14` targeting `192.168.1.53` was dropp
 
 #### Extracted Event Fields:
 
-* **`@timestamp`:** `Sep 11, 2026 @ 20:44:52.099`
-* **`location`:** `10.10.1.1` (pfSense Firewall IP)
-* **`decoder.name`:** `pfsense-custom-header`
-* **`data.interface`:** `em0`
-* **`data.action`:** `block`
-* **`data.direction`:** `in`
-* **`data.protocol`:** `icmp`
-* **`data.srcip`:** `192.168.1.14`
-* **`data.dstip`:** `192.168.1.53`
-* **`full_log`:** `Sep 11 21:44:52 filterlog[8179]: 4,,,1000000103,em0,match,block,in,4,0x0,,128,13950,0,none,1,icmp,60,192.168.1.14,192.168.1.53,request,1,2240`
+![pfsenselog](../../screenshots/wazuh-server/pfsenselog.png)
