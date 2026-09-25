@@ -3,7 +3,7 @@
 
 | Metadata | Details |
 | :--- | :--- |
-| **Incident ID** | IR-2026-002 |
+| **Incident ID** | NF-2026-002 |
 | **Date** | 2026-09-24 |
 | **Platform / Lab** | CyberDefenders |
 | **Severity** | High / Critical |
